@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y --no-install-recommends podman curl libatomic1
+sudo apt install -y --no-install-recommends podman curl libatomic1 uidmap
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 . ~/.bashrc
