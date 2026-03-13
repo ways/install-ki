@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y --no-install-recommends podman curl libatomic1 uidmap slirp4netns python3-pip
+sudo apt install -y --no-install-recommends podman curl libatomic1 uidmap slirp4netns python3-pip wget
 
 # uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -19,3 +19,9 @@ npm install -g @github/copilot
 
 
 copilot --allow-all-tools --version
+
+
+wget https://go.dev/dl/go1.26.1.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.26.1.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go version
